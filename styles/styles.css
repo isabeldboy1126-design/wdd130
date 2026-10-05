@@ -1,11 +1,16 @@
+:root {
+    --primary-text-color: white;
+
+    ;
+}
+
 nav {
     background-color: darkblue;
     padding: 10px
 }
 
 nav a {
-    color: white;
-    display: block;
+    color: var(--primary-text-color) display: block;
     padding: 20px;
 }
 
