@@ -1,4 +1,6 @@
-/* CSS VARIABLES */
+/* ==============================
+   CSS VARIABLES
+============================== */
 
 :root {
     --primary-color: #124559;
@@ -10,7 +12,9 @@
     --body-font: Arial, Helvetica, sans-serif;
 }
 
-/* GENERAL RESET */
+/* ==============================
+   GENERAL RESET
+============================== */
 
 * {
     margin: 0;
@@ -18,15 +22,20 @@
     box-sizing: border-box;
 }
 
-/* BODY */
+/* ==============================
+   BODY
+============================== */
 
 body {
     font-family: var(--body-font);
     color: var(--accent1-color);
     background-color: #f6f9fa;
+    line-height: 1.5;
 }
 
-/* PAGE WIDTH */
+/* ==============================
+   PAGE WIDTH
+============================== */
 
 header,
 main,
@@ -36,7 +45,9 @@ footer {
     margin: 0 auto;
 }
 
-/* HEADINGS */
+/* ==============================
+   HEADINGS
+============================== */
 
 h1,
 h2 {
@@ -44,7 +55,9 @@ h2 {
     color: var(--primary-color);
 }
 
-/* HEADER GRID LAYOUT */
+/* ==============================
+   HEADER
+============================== */
 
 header {
     display: grid;
@@ -52,11 +65,10 @@ header {
     align-items: center;
 
     padding: 16px 24px;
-
     background-color: var(--secondary-color);
 }
 
-/* LOGO */
+/* HEADER LOGO */
 
 header .logo {
     display: block;
@@ -64,7 +76,7 @@ header .logo {
     height: auto;
 }
 
-/* NAVIGATION FLEXBOX */
+/* HEADER NAVIGATION */
 
 header nav ul {
     display: flex;
@@ -80,8 +92,8 @@ header nav a {
     display: block;
     padding: 12px;
 
-    text-decoration: none;
     color: var(--primary-color);
+    text-decoration: none;
     font-weight: bold;
 }
 
@@ -92,13 +104,17 @@ header nav a:hover {
     color: var(--accent2-color);
 }
 
-/* HERO SECTION */
+/* ==============================
+   ABOUT US PAGE
+============================== */
+
+/* HERO CONTAINER */
 
 .hero {
     position: relative;
 }
 
-/* HERO IMAGE */
+/* HERO BACKGROUND IMAGE */
 
 .hero > img {
     display: block;
@@ -147,14 +163,16 @@ header nav a:hover {
     margin: 0 0 8px 16px;
 }
 
-/* HERO PARAGRAPH */
+/* HERO ARTICLE TEXT */
 
 .hero article p {
-    line-height: 1.5;
     font-size: 14px;
+    line-height: 1.5;
 }
 
-/* GENERAL SECTION STYLING */
+/* ==============================
+   GENERAL SECTIONS
+============================== */
 
 section {
     margin: 16px 0;
@@ -170,7 +188,9 @@ section h2 {
     text-align: center;
 }
 
-/* HISTORY SECTION GRID */
+/* ==============================
+   HISTORY SECTION
+============================== */
 
 .history-content {
     display: grid;
@@ -184,8 +204,8 @@ section h2 {
 /* HISTORY PARAGRAPHS */
 
 .history-content p {
-    line-height: 1.6;
     font-size: 14px;
+    line-height: 1.6;
 }
 
 /* HISTORY IMAGE */
@@ -197,7 +217,9 @@ section h2 {
     height: auto;
 }
 
-/* ADVENTURE GALLERY */
+/* ==============================
+   ADVENTURE SECTION
+============================== */
 
 .adventure-gallery {
     display: grid;
@@ -231,7 +253,434 @@ section h2 {
     font-size: 13px;
 }
 
-/* FOOTER */
+/* ==============================
+   CONTACT US PAGE
+============================== */
+
+/* CONTACT PAGE BACKGROUND */
+
+.contact-page {
+    background-color: var(--accent2-color);
+    padding-bottom: 16px;
+}
+
+/* CONTACT PAGE MAIN HEADING */
+
+.contact-page h1 {
+    position: static;
+
+    text-align: center;
+
+    padding: 24px 16px 12px;
+
+    font-family: var(--heading-font);
+    font-size: 30px;
+
+    color: var(--primary-color);
+}
+
+/* CONTACT INTRODUCTION */
+
+.contact-intro {
+    text-align: center;
+
+    max-width: 700px;
+
+    margin: 0 auto;
+    padding: 0 24px 24px;
+
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* ==============================
+   COMPANY CONTACT INFORMATION
+============================== */
+
+.contact-info {
+    padding: 24px;
+}
+
+/* CONTACT INFORMATION HEADING */
+
+.contact-info h2 {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+/* CONTACT INFORMATION GRID */
+
+.contact-layout {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 24px;
+
+    align-items: start;
+}
+
+/* COMPANY DETAILS */
+
+.company-details {
+    padding: 16px;
+
+    background-color: var(--accent2-color);
+}
+
+/* COMPANY NAME */
+
+.company-details h3 {
+    color: var(--primary-color);
+
+    font-size: 18px;
+
+    margin-bottom: 16px;
+}
+
+/* COMPANY ADDRESS */
+
+.company-details address {
+    font-style: normal;
+}
+
+/* COMPANY PARAGRAPHS */
+
+.company-details p {
+    margin-bottom: 16px;
+
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* CONTACT LINKS */
+
+.company-details a {
+    color: var(--primary-color);
+}
+
+/* ==============================
+   GOOGLE MAP
+============================== */
+
+.contact-map {
+    padding: 16px;
+}
+
+/* MAP HEADING */
+
+.contact-map h3 {
+    color: var(--primary-color);
+
+    font-size: 18px;
+
+    margin-bottom: 16px;
+}
+
+/* MAP FRAME */
+
+.contact-map iframe {
+    display: block;
+
+    width: 100%;
+    height: 260px;
+
+    border: 1px solid #aabac2;
+}
+
+/* ==============================
+   EMPLOYEE SECTION
+============================== */
+
+.employees {
+    text-align: center;
+    padding: 24px;
+}
+
+/* EMPLOYEE SECTION HEADING */
+
+.employees h2 {
+    margin-bottom: 16px;
+}
+
+/* EMPLOYEE INTRODUCTION */
+
+.team-intro {
+    margin-bottom: 24px;
+
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* ==============================
+   EMPLOYEE GALLERY
+============================== */
+
+.employee-gallery {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 24px;
+
+    align-items: start;
+}
+
+/* EMPLOYEE FIGURES */
+
+.employee-gallery figure {
+    padding: 12px;
+
+    text-align: center;
+
+    background-color: var(--accent2-color);
+
+    border: 1px solid #d6e1e6;
+}
+
+/* EMPLOYEE IMAGES */
+
+.employee-gallery img {
+    display: block;
+
+    width: 100%;
+    height: 180px;
+
+    object-fit: cover;
+}
+
+/* EMPLOYEE CAPTIONS */
+
+.employee-gallery figcaption {
+    padding: 12px 4px;
+
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* EMPLOYEE NAMES */
+
+.employee-gallery figcaption strong {
+    color: var(--primary-color);
+}
+
+/* ==============================
+   CONTACT FORM SECTION
+============================== */
+
+.contact-form-section {
+    padding: 32px;
+}
+
+/* FORM HEADING */
+
+.contact-form-section h2 {
+    text-align: center;
+
+    margin-bottom: 16px;
+}
+
+/* FORM INTRODUCTION */
+
+.form-intro {
+    text-align: center;
+
+    margin-bottom: 24px;
+
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* ==============================
+   FORM CONTAINER
+============================== */
+
+.contact-form {
+    max-width: 600px;
+
+    margin: 0 auto;
+    padding: 24px;
+
+    background-color: var(--accent2-color);
+
+    border: 1px solid #c6d5dc;
+}
+
+/* ==============================
+   FORM ITEMS
+============================== */
+
+.form-item {
+    margin-bottom: 20px;
+}
+
+/* FORM LABELS */
+
+.form-item label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    color: var(--primary-color);
+}
+
+/* TEXT AND EMAIL FIELDS */
+
+.form-item input {
+    display: block;
+
+    width: 100%;
+    padding: 12px;
+
+    font-family: var(--body-font);
+    font-size: 16px;
+
+    color: var(--accent1-color);
+    background-color: #ffffff;
+
+    border: 1px solid #777777;
+}
+
+/* ==============================
+   MESSAGE PURPOSE
+============================== */
+
+.message-purpose {
+    border: 1px solid #b5c5ce;
+
+    padding: 16px;
+    margin-bottom: 20px;
+}
+
+/* RADIO GROUP HEADING */
+
+.message-purpose legend {
+    padding: 0 8px;
+
+    font-weight: bold;
+    font-size: 15px;
+
+    color: var(--primary-color);
+}
+
+/* RADIO OPTIONS */
+
+.message-purpose label {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    margin: 12px 0;
+
+    font-size: 15px;
+    cursor: pointer;
+}
+
+/* RADIO BUTTONS */
+
+.message-purpose input {
+    width: 16px;
+    height: 16px;
+
+    cursor: pointer;
+}
+
+/* ==============================
+   MESSAGE TEXTAREA
+============================== */
+
+.form-item textarea {
+    display: block;
+
+    width: 100%;
+    padding: 12px;
+
+    font-family: var(--body-font);
+    font-size: 16px;
+
+    color: var(--accent1-color);
+    background-color: #ffffff;
+
+    border: 1px solid #777777;
+}
+
+/* ==============================
+   NEWSLETTER CHECKBOX
+============================== */
+
+.newsletter {
+    margin-bottom: 24px;
+}
+
+/* NEWSLETTER LABEL */
+
+.newsletter label {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: 15px;
+    line-height: 1.6;
+
+    cursor: pointer;
+}
+
+/* CHECKBOX */
+
+.newsletter input {
+    width: 16px;
+    height: 16px;
+
+    cursor: pointer;
+}
+
+/* ==============================
+   SUBMIT BUTTON
+============================== */
+
+.contact-form button {
+    display: block;
+
+    width: 100%;
+
+    padding: 14px;
+
+    background-color: var(--primary-color);
+    color: var(--accent2-color);
+
+    border: none;
+
+    font-family: var(--body-font);
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+/* BUTTON HOVER */
+
+.contact-form button:hover {
+    background-color: #0b3242;
+}
+
+/* ==============================
+   FORM FOCUS STYLING
+============================== */
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* ==============================
+   FOOTER
+============================== */
 
 footer {
     display: flex;
@@ -252,7 +701,9 @@ footer p {
     font-size: 13px;
 }
 
-/* SOCIAL MEDIA NAVIGATION */
+/* ==============================
+   SOCIAL MEDIA
+============================== */
 
 .socialmedia {
     display: flex;
@@ -277,23 +728,34 @@ footer p {
     height: 30px;
 }
 
-/* SMALL SCREEN LAYOUT */
+/* ==============================
+   RESPONSIVE DESIGN
+============================== */
 
 @media (max-width: 650px) {
 
+    /* HEADER */
+
     header {
         grid-template-columns: 1fr;
+
         justify-items: center;
+
         gap: 12px;
     }
 
+    /* NAVIGATION */
+
     header nav ul {
         flex-wrap: wrap;
+        justify-content: center;
     }
 
     header nav a {
         padding: 8px;
     }
+
+    /* HERO */
 
     .hero h1 {
         position: static;
@@ -305,6 +767,8 @@ footer p {
         margin: 0;
     }
 
+    /* HISTORY */
+
     .history-content {
         grid-template-columns: 1fr;
     }
@@ -314,13 +778,83 @@ footer p {
         margin: 0 auto;
     }
 
+    /* ADVENTURE GALLERY */
+
     .adventure-gallery {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    /* CONTACT PAGE HEADING */
+
+    .contact-page h1 {
+        font-size: 24px;
+        padding: 20px 16px;
+    }
+
+    /* CONTACT INTRODUCTION */
+
+    .contact-intro {
+        padding: 0 16px 20px;
+    }
+
+    /* CONTACT INFORMATION */
+
+    .contact-layout {
+        grid-template-columns: 1fr;
+    }
+
+    /* EMPLOYEE GALLERY */
+
+    .employee-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .employee-gallery figure {
+        width: 100%;
+        max-width: 320px;
+
+        margin: 0 auto;
+    }
+
+    /* CONTACT FORM */
+
+    .contact-form-section {
+        padding: 16px;
+    }
+
+    .contact-form {
+        padding: 16px;
+    }
+
+    /* FOOTER */
+
     footer {
         flex-direction: column;
         text-align: center;
+    }
+
+}
+
+/* ==============================
+   VERY SMALL SCREENS
+============================== */
+
+@media (max-width: 400px) {
+
+    .adventure-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 16px;
+    }
+
+    .contact-info {
+        padding: 16px;
+    }
+
+    .contact-form-section {
+        padding: 16px;
     }
 
 }
