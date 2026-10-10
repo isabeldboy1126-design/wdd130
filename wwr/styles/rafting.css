@@ -23,7 +23,7 @@
 body {
     font-family: var(--body-font);
     color: var(--accent1-color);
-    background-color: var(--accent2-color);
+    background-color: #f6f9fa;
 }
 
 /* PAGE WIDTH */
@@ -32,6 +32,7 @@ header,
 main,
 footer {
     width: 840px;
+    max-width: 100%;
     margin: 0 auto;
 }
 
@@ -43,53 +44,52 @@ h2 {
     color: var(--primary-color);
 }
 
-/* GENERAL SPACING */
-
-nav,
-p,
-section,
-article {
-    margin: 16px;
-    padding: 8px;
-}
-
-/* HEADER */
+/* HEADER GRID LAYOUT */
 
 header {
-    background-color: var(--primary-color);
-    text-align: center;
-    padding: 16px;
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    align-items: center;
+
+    padding: 16px 24px;
+
+    background-color: var(--secondary-color);
 }
 
-/* HEADER LOGO */
+/* LOGO */
 
-header img {
+header .logo {
+    display: block;
     width: 110px;
     height: auto;
-    display: block;
-    margin: 0 auto;
 }
 
-/* NAVIGATION */
+/* NAVIGATION FLEXBOX */
 
 header nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
     list-style: none;
 }
 
-header nav li {
-    display: inline-block;
-    margin: 8px;
-}
+/* NAVIGATION LINKS */
 
 header nav a {
-    color: var(--accent2-color);
+    display: block;
+    padding: 12px;
+
     text-decoration: none;
-    padding: 8px;
+    color: var(--primary-color);
+    font-weight: bold;
 }
 
+/* NAVIGATION HOVER */
+
 header nav a:hover {
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
+    background-color: var(--primary-color);
+    color: var(--accent2-color);
 }
 
 /* HERO SECTION */
@@ -98,7 +98,7 @@ header nav a:hover {
     position: relative;
 }
 
-/* HERO BACKGROUND IMAGE */
+/* HERO IMAGE */
 
 .hero > img {
     display: block;
@@ -110,88 +110,217 @@ header nav a:hover {
 
 .hero h1 {
     position: absolute;
-    top: 20px;
+    top: 16px;
+    left: 0;
+
     width: 100%;
+    padding: 12px;
 
     text-align: center;
-    padding: 16px;
 
-    background-color: rgba(18, 69, 89, 0.85);
-    color: white;
+    background-color: rgba(18, 69, 89, 0.9);
+    color: var(--accent2-color);
 }
 
 /* HERO ARTICLE */
 
 .hero article {
     position: absolute;
-    bottom: 24px;
+
     left: 24px;
     right: 24px;
+    bottom: 16px;
 
-    background-color: rgba(255, 255, 255, 0.9);
-    color: var(--accent1-color);
+    padding: 14px;
 
-    padding: 16px;
+    background-color: rgba(255, 255, 255, 0.93);
 }
 
-/* IMAGE INSIDE HERO ARTICLE */
+/* HERO ARTICLE IMAGE */
 
 .hero article img {
     float: right;
+
     width: 125px;
     height: auto;
+
     margin: 0 0 8px 16px;
 }
 
-/* ARTICLE PARAGRAPH */
+/* HERO PARAGRAPH */
 
 .hero article p {
-    font-size: 15px;
     line-height: 1.5;
+    font-size: 14px;
 }
 
-/* MAIN SECTIONS */
+/* GENERAL SECTION STYLING */
 
-main section {
-    background-color: var(--secondary-color);
-    padding: 16px;
+section {
     margin: 16px 0;
+    padding: 24px;
+
+    background-color: var(--secondary-color);
 }
 
 /* SECTION HEADINGS */
 
-main section h2 {
-    margin-bottom: 16px;
+section h2 {
+    margin-bottom: 20px;
     text-align: center;
 }
 
-/* SECTION PARAGRAPHS */
+/* HISTORY SECTION GRID */
 
-main section p {
+.history-content {
+    display: grid;
+
+    grid-template-columns: 1fr 180px 1fr;
+
+    gap: 18px;
+    align-items: center;
+}
+
+/* HISTORY PARAGRAPHS */
+
+.history-content p {
     line-height: 1.6;
+    font-size: 14px;
+}
+
+/* HISTORY IMAGE */
+
+.history-content img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+}
+
+/* ADVENTURE GALLERY */
+
+.adventure-gallery {
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 14px;
+}
+
+/* ADVENTURE FIGURES */
+
+.adventure-gallery figure {
+    text-align: center;
+}
+
+/* ADVENTURE IMAGES */
+
+.adventure-gallery img {
+    display: block;
+
+    width: 100%;
+    height: 105px;
+
+    object-fit: cover;
+}
+
+/* ADVENTURE CAPTIONS */
+
+.adventure-gallery figcaption {
+    padding-top: 8px;
+    font-size: 13px;
 }
 
 /* FOOTER */
 
 footer {
-    background-color: var(--primary-color);
-    color: var(--accent2-color);
+    display: flex;
 
-    text-align: center;
-    padding: 16px;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 16px;
+
+    padding: 20px 24px;
+
+    background-color: var(--secondary-color);
+}
+
+/* FOOTER TEXT */
+
+footer p {
+    font-size: 13px;
+}
+
+/* SOCIAL MEDIA NAVIGATION */
+
+.socialmedia {
+    display: flex;
+
+    gap: 12px;
+    align-items: center;
 }
 
 /* SOCIAL MEDIA LINKS */
 
 .socialmedia a {
+    display: block;
     text-decoration: none;
-    display: inline-block;
-    margin: 0 8px;
 }
 
 /* SOCIAL MEDIA ICONS */
 
 .socialmedia img {
-    width: 32px;
-    height: 32px;
+    display: block;
+
+    width: 30px;
+    height: 30px;
+}
+
+/* SMALL SCREEN LAYOUT */
+
+@media (max-width: 650px) {
+
+    header {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 12px;
+    }
+
+    header nav ul {
+        flex-wrap: wrap;
+    }
+
+    header nav a {
+        padding: 8px;
+    }
+
+    .hero h1 {
+        position: static;
+        font-size: 22px;
+    }
+
+    .hero article {
+        position: static;
+        margin: 0;
+    }
+
+    .history-content {
+        grid-template-columns: 1fr;
+    }
+
+    .history-content img {
+        max-width: 320px;
+        margin: 0 auto;
+    }
+
+    .adventure-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
 }
